@@ -39,7 +39,7 @@ var maxAge = 47
 var totalDays = (maxAge-currentAge) * 365
 var perDay = 5000
 var money = ""
-var needed = "dolla dolla bills earned"
+var needed = "bags of tea"
 if (needed == "dolla dolla bills earned") {
 	money = "$"
 }
