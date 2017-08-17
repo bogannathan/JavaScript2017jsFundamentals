@@ -30,7 +30,6 @@ for (let i of arrOfFood) { // this grabs the values of the array instead of numb
 
 for (let foodItem of arrOfFood) {console.log(foodItem)}
 
-arrOfFood.forEach(function(foodItem, banana, whatever){
+arrOfFood.forEach(function(banana){
 	console.log(banana)
-	console.log(whatever)
-	console.log(foodItem)}) // function is inside the parentheses for each
+}) // function is inside the parentheses for each
