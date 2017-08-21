@@ -35,11 +35,11 @@ myNumber = myNumber / 7
 console.log(myNumber)
 
 var currentAge = 25
-var maxAge = 47
+var maxAge = 86
 var totalDays = (maxAge-currentAge) * 365
 var perDay = 5000
 var money = ""
-var needed = "bags of tea"
+var needed = "dolla dolla bills earned"
 if (needed == "dolla dolla bills earned") {
 	money = "$"
 }
