@@ -1,0 +1,11 @@
+.box {
+	height: 30em;
+	width: 50%;
+	background-color: green;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+#nameList {
+	list-style: none;
+}
