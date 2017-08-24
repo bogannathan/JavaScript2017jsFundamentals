@@ -5,6 +5,7 @@
 var el = document.querySelector(".myclass");
 
 var el = document.querySelector("div.user-panel.main input[name='login']");
+.querySelectorAll
 
 //elements in el can be accessed with an index
 
