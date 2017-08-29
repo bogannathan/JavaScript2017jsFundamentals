@@ -45,17 +45,14 @@ $(document).ready(function(){
 	})
 
 	$friends.delegate('.remove', 'click', function(){
-		//debugger;
 		var $li = $(this).closest('li');
 		$.ajax({
 			type: 'DELETE',
 			url: 'http://rest.learncode.academy/api/learncode/javascriptfall/' + $(this).attr('id'),
 			success: function(){
-				//debugger;
 				console.log("delete");
 				// $li.remove();
 				$li.fadeOut(300, function(){
-					debugger;
 					$(this).remove();
 				})
 			}
