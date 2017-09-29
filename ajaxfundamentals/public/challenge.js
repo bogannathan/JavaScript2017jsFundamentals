@@ -102,10 +102,18 @@ $(document).ready(function(){
 	})
 	
 	$(searchRes).keypress(function (e){
-	if(e.keyCode === 13){
+	if(e.which === 13){
+		findMovies()
+	}
+
+})
+
+	$(searchName).click(function(){
+		findMovies()
+	})
+	function findMovies() {
 		let search = $(searchRes).val();
 		$(searchRes).val("");
-		$(searchResult).html("")
 		$.ajax({
 			type: 'GET',
 			url: 'https://swapi.co/api/people/?search=' + search
@@ -131,37 +139,6 @@ $(document).ready(function(){
 			}
 		})
 	}
-
-})
-
-	$(searchName).on('click', function(){
-		let search = $(searchRes).val();
-		$(searchRes).val("");
-		$.ajax({
-			type: 'GET',
-			url: 'https://swapi.co/api/people/?search=' + search
-		}).done(function(data){
-			$(searchResult).html("")
-			for (let d in data.results[0]){
-				if(d == "films"){
-				let m = data.results[0][d]
-				for (let h in m){
-					$.ajax({
-						type: 'GET',
-						url:  m[h],
-					}).done(function(data){
-						let movieFilmsObj = {
-							data : []
-							}
-						$(searchResult).append("<p>" + data.title + "</p>")
-				})
-			
-				
-				}
-			}
-			}
-		})
-	})
 
 	let clicked = false;
 	$(moviebtn).on('click',function(){
